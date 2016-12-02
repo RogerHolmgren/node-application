@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielstern/integration-test-repo.git"
+    "url": "git+https://github.com/RogerHolmgren/node-application.git"
   },
   "author": "Roger",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/danielstern/integration-test-repo/issues"
+    "url": "https://github.com/RogerHolmgren/node-application/issues"
   },
-  "homepage": "https://github.com/danielstern/integration-test-repo#readme",
+  "homepage": "https://github.com/RogerHolmgren/node-application#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
