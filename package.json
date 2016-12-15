@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RogerHolmgren/node-application.git"
+    "url": "git+https://github.com/RogerHolmgren/wsk-conman.git"
   },
   "author": "Roger",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RogerHolmgren/node-application/issues"
+    "url": "https://github.com/RogerHolmgren/wsk-conman/issues"
   },
-  "homepage": "https://github.com/RogerHolmgren/node-application#readme",
+  "homepage": "https://github.com/RogerHolmgren/wsk-conman#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",

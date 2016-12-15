@@ -1,14 +1,14 @@
 <head>
-	<title>Message Board - Github Integration</title>
-	<link rel="stylesheet" href="
+  <title>Message Board - Github Integration</title>
+  <link rel="stylesheet" href="
 https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
 </head>
 <script src=https://code.jquery.com/jquery-3.0.0-beta1.js></script>
 <script>
-	$.getJSON('/messages',(messages)=>{
-		console.log(messages);
-		messages.forEach((m)=>{
-			$('#messages').append(`
+  $.getJSON('/messages', (messages) => {
+    console.log(messages);
+    messages.forEach((m) => {
+      $('#messages').append(`
 <div>
 	<h3>
 		${m.title}
@@ -20,18 +20,19 @@ https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
 		Learn More
 	</a>
 </div>
-			`);	
-		})
-		
-	})
+			`);
+    })
+
+  })
 </script>
+
 <body>
-	<div class=container>
-		<h1>
+  <div class=container>
+    <h1>
 			Message Board
 		</h1>
-		<div id=messages>
-		<!--
+    <div id=messages>
+      <!--
 			<h2>
 				Message Title
 			</h2>
@@ -42,7 +43,7 @@ https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
 				Message Link
 			</a>
 		-->
-		</div>
-	</div>
+    </div>
+  </div>
 
 </body>
