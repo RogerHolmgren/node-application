@@ -4,8 +4,9 @@
 <head>
   <title>Message Board - Github Integration</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <script src='./app/main.jsx'></script>
 </head>
-<script src=https://code.jquery.com/jquery-3.0.0-beta1.js></script>
+
 <script>
   $.getJSON('/messages', (messages) => {
     console.log(messages);
@@ -31,19 +32,7 @@
 <body>
   <div class=container>
     <h1>WSK ConMan</h1>
-    <div id=messages>
-      <!--
-			<h2>
-				Message Title
-			</h2>
-			<p>
-				Message Body
-			</p>
-			<a href="">
-				Message Link
-			</a>
-		-->
-    </div>
+    <div id=messages></div>
   </div>
 </body>
 
