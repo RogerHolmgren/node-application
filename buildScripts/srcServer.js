@@ -3,11 +3,20 @@ import path from 'path';
 import open from 'open';
 import webpack from 'webpack';
 import config from '../webpack.config.dev';
+import mongoose from 'mongoose';
 
 /* eslint-disable no-console */
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 const app = express();
 const compiler = webpack(config);
+
+
+mongoose.connect('mongodb://localhost/test');
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('Connected to db');9
+});
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
@@ -29,7 +38,7 @@ app.listen(port, (err) => {
 
 app.get('/users', (req, res) => {
   res.json([
-    {"id": 1,"firstName":"Bob"},
+    {"id": 1,"firstName":"Bla"},
     {"id": 2,"firstName":"Tammy"},
     {"id": 3,"firstName":"Tina"}
   ])
