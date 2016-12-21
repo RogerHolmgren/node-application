@@ -6,7 +6,6 @@
   "scripts": {
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
-    "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all security-check open:src lint:watch test:watch",
     "open:src": "babel-node buildScripts/srcServer.js",
     "lint": "esw webpack.config.* src buildScripts --color",
@@ -24,6 +23,7 @@
   },
   "homepage": "https://github.com/RogerHolmgren/wsk-conman#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongoose": "^4.7.4",
     "react": "^15.4.1",

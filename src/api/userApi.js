@@ -1,7 +1,7 @@
 import 'whatwg-fetch';
 
 export function getUsers() {
-  return get('users');
+  return get('api/users');
 }
 
 function get(url) {
