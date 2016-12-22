@@ -1,15 +1,11 @@
-import './index.css';
-import {getUsers} from './api/userApi';
+import React from 'react';
+import {render} from 'react-dom';
+import {Router, browserHistory} from 'react-router';
+import routes from './routes';
+import './styles/styles.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-getUsers().then(result => {
-  let usersBody = "";
-
-  result.forEach(user => {
-    usersBody+= `<tr>
-      <td><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></td>
-      <td>${user.name}</td>
-      <td>${user.email}</td>
-      </tr>`
-  });
-  global.document.getElementById('users').innerHTML = usersBody;
-});
+render(
+  <Router history={browserHistory} routes={routes} />,
+  document.getElementById('app')
+);
